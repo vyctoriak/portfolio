@@ -1,8 +1,8 @@
 # Vyctoria Karina - Software Developer Portfolio
 
-A modern, responsive portfolio website for software developer Vyctoria Karina, featuring internationalization support for English and Portuguese.
+A modern, responsive portfolio website for me, featuring internationalization support for English 🇺🇸 and Portuguese 🇧🇷.
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Vyctoria+Karina+Portfolio)
+<!-- ![Portfolio Preview](https://via.placeholder.com/800x400?text=Vyctoria+Karina+Portfolio) -->
 
 ## Features
 
