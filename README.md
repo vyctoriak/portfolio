@@ -6,7 +6,7 @@ A modern, responsive portfolio website for me, featuring internationalization su
 
 ## Features
 
-- 🌐 Multilingual support (English and Portuguese)
+- 🌐 Multilingual support (English 🇺🇸 and Portuguese 🇧🇷)
 - 🎨 Modern, clean design with responsive layout
 - 🌓 Light/dark mode toggle
 - 📱 Mobile-friendly navigation
@@ -18,7 +18,7 @@ A modern, responsive portfolio website for me, featuring internationalization su
 
 ## Technologies Used
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Styling**: Tailwind CSS with shadcn/ui components
 - **Internationalization**: Custom i18n implementation
 - **Typography**: Inter font (Google Fonts)
