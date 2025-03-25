@@ -155,6 +155,10 @@ export const translations = {
       en: "English",
       "pt-br": "Português",
     },
+    themeToggle: {
+      light: "Light",
+      dark: "Dark",
+    },
   },
   "pt-br": {
     header: {
@@ -309,6 +313,10 @@ export const translations = {
     languageSwitcher: {
       en: "English",
       "pt-br": "Português",
+    },
+    themeToggle: {
+      light: "Claro",
+      dark: "Escuro",
     },
   },
 };

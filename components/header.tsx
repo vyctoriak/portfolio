@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { useMobile } from "@/hooks/use-mobile"
 import { useLanguage } from "@/lib/i18n/client"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { ThemeToggle } from "./theme-toggle"
 
 export function Header() {
   const isMobile = useMobile()
@@ -27,6 +28,7 @@ export function Header() {
         {isMobile ? (
           <>
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <LanguageSwitcher />
               <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -92,7 +94,10 @@ export function Header() {
                 {t("header.contact")}
               </Link>
             </nav>
-            <LanguageSwitcher />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>
