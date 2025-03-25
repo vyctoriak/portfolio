@@ -5,7 +5,8 @@ import "../globals.css"
 import { getTranslations } from "@/lib/i18n/server"
 import { LanguageProvider } from "@/lib/i18n/client"
 import type { Locale } from "@/lib/i18n/types"
-import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper"
+// import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper"
+import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
   return (
     <LanguageProvider locale={locale} translations={translations}>
       {children}
+      <Toaster />
     </LanguageProvider>
   );
 }
