@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/lib/i18n/client"
 import type { Locale } from "@/lib/i18n/types"
 // import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper"
 import { Toaster } from "@/components/ui/toaster"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default async function LocaleLayout({
     <LanguageProvider locale={locale} translations={translations}>
       {children}
       <Toaster />
+      <SpeedInsights />
     </LanguageProvider>
   );
 }
