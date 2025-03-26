@@ -8,6 +8,7 @@ import type { Locale } from "@/lib/i18n/types"
 // import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper"
 import { Toaster } from "@/components/ui/toaster"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default async function LocaleLayout({
       {children}
       <Toaster />
       <SpeedInsights />
+      <Analytics />
     </LanguageProvider>
   );
 }
