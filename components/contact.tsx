@@ -1,6 +1,6 @@
 "use client"
 
-import type React from "react"
+import React from "react"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -10,10 +10,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/client"
 import { useToast } from "@/hooks/use-toast"
+// import ReCAPTCHA from "react-google-recaptcha"
 
 export function Contact() {
   const { t } = useLanguage()
   const { toast } = useToast()
+  // const recaptchaRef = React.useRef<ReCAPTCHA>(null)
 
   const [formData, setFormData] = useState({
     name: "",
@@ -32,18 +34,29 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
+    // const recaptchaValue = recaptchaRef.current?.getValue()
+    // if(!recaptchaValue) {
+    //   toast({
+    //     title: "Error",
+    //     description: "Please complete the reCAPTCHA verification",
+    //     variant: "destructive",
+    //   })
+    //   return
+    // }
+
     setIsSubmitting(true)
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000))
-      console.log("Form submitted:", formData)
+      // console.log("Form submitted:", { ...formData, recaptchaValue })
       toast({
         title: t("contact.form.titleNotification"),
         description: t("contact.form.success"),
         variant: "success",
       })
-      
+
       setFormData({ name: "", email: "", subject: "", message: "" })
+      // recaptchaRef.current?.reset()
 
     } catch (error) {
       toast({
@@ -75,12 +88,12 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold">{t("contact.email")}</h3>
-                  <p className="text-muted-foreground">vyctoria@example.com</p>
+                  <p className="text-muted-foreground">vyctoriak@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card>
+            {/* <Card>
               <CardContent className="p-6 flex items-center gap-4">
                 <div className="bg-primary/10 p-3 rounded-full">
                   <Phone className="h-6 w-6 text-primary" />
@@ -90,7 +103,7 @@ export function Contact() {
                   <p className="text-muted-foreground">+55 (11) 9123-4567</p>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
 
             <Card>
               <CardContent className="p-6 flex items-center gap-4">
@@ -167,6 +180,14 @@ export function Contact() {
                       required
                     />
                   </div>
+
+                  {/* <div className="flex justify-center mb-4">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                      theme="light"
+                    />
+                  </div> */}
 
                   <Button type="submit" className="w-full md:w-auto" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : t("contact.form.send")}
