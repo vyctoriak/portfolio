@@ -48,7 +48,7 @@ export function Hero() {
         <div className="relative aspect-square rounded-full bg-gradient-to-br from-primary/20 to-primary/40 flex items-center justify-center">
           <div className="absolute inset-4 rounded-full overflow-hidden bg-muted flex items-center justify-center">
             <Image
-              src="/praga2.jpeg"
+              src="/neves.jpeg"
               alt="Vyctoria Karina"
               width={400}
               height={400}
