@@ -4,9 +4,22 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Download } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/client"
+import { saveAs } from 'file-saver'
 
 export function About() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
+
+  const handleDownload = () => {
+    const resumeFiles = {
+      'en': '/documents/resumes/Vyctoria-en.pdf',
+      'pt-br': '/documents/resumes/Vyctoria-pt-br.pdf'
+    }
+
+    const resumeUrl = resumeFiles[locale]
+    const fileName = locale === 'en' ? 'Vyctoria-en.pdf' : 'Vyctoria-pt-br.pdf'
+    
+    saveAs(resumeUrl, fileName)
+  }
 
   return (
     <section id="about" className="py-20 bg-muted/50">
@@ -20,7 +33,7 @@ export function About() {
           <div className="space-y-6">
             <p className="text-lg">{t("about.paragraph1")}</p>
             <p className="text-lg">{t("about.paragraph2")}</p>
-            <Button className="mt-4">
+            <Button className="mt-4" onClick={handleDownload}>
               <Download className="mr-2 h-4 w-4" /> {t("about.downloadResume")}
             </Button>
           </div>
