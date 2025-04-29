@@ -37,17 +37,13 @@ export function LanguageProvider({
   const setLocale = (newLocale: Locale) => {
     if (newLocale === currentLocale) return
 
-    // Set cookie
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`
 
-    // Get the current path without the locale prefix
     const pathWithoutLocale = pathname.replace(/^\/(en|pt-br)/, "")
 
-    // Redirect to the same path with the new locale
     router.push(`/${newLocale}${pathWithoutLocale}`)
   }
 
-  // Function to get nested translations using dot notation
   const t = (key: string): string => {
     const keys = key.split(".")
     let result = currentTranslations
