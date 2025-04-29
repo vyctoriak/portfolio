@@ -16,20 +16,26 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="rounded-full">
+        <Button variant="ghost" size="icon" className="rounded-full" aria-label="Switch language">
           <Globe className="h-5 w-5" />
-          <span className="sr-only">Switch language</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => handleChangeLanguage("en")} className={locale === "en" ? "bg-muted" : ""}>
-          {t("languageSwitcher.en")}
+        <DropdownMenuItem 
+          onClick={() => handleChangeLanguage("en")} 
+          className={locale === "en" ? "bg-muted" : ""}
+          aria-label="Switch to English"
+        >
+          <span aria-hidden="true">🇺🇸</span>
+          <span className="ml-2">{t("languageSwitcher.en")}</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => handleChangeLanguage("pt-br")}
           className={locale === "pt-br" ? "bg-muted" : ""}
+          aria-label="Mudar para Português"
         >
-          {t("languageSwitcher.pt-br")}
+          <span aria-hidden="true">🇧🇷</span>
+          <span className="ml-2">{t("languageSwitcher.pt-br")}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
