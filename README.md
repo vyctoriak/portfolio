@@ -41,7 +41,6 @@ git clone https://github.com/yourusername/vyctoria-karina-portfolio.git
 cd vyctoria-karina-portfolio
 ```
 
-
 2. Install dependencies:
 
 ```bash
@@ -59,7 +58,6 @@ yarn dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
 
 ## Project Structure
 
@@ -87,7 +85,6 @@ yarn dev
 └── tailwind.config.ts    # Tailwind CSS configuration
 ```
 
-
 ## Internationalization (i18n)
 
 This portfolio supports multiple languages through a custom i18n implementation:
@@ -95,7 +92,6 @@ This portfolio supports multiple languages through a custom i18n implementation:
 - **Supported languages**: English (en) and Portuguese (pt-br)
 - **Default language**: English (en)
 - **URL structure**: `/{locale}/path` (e.g., `/en/` or `/pt-br/`)
-
 
 ### How it works:
 
@@ -105,33 +101,29 @@ This portfolio supports multiple languages through a custom i18n implementation:
 4. The `useLanguage` hook provides access to the current locale and translation function
 5. A language switcher in the header allows users to change languages
 
-
 ### Adding a new language:
 
 1. Add the new locale to the `locales` array in `middleware.ts`
 2. Add translations for the new locale in `lib/i18n/translations.ts`
 3. Update the language switcher to include the new language.
 
-
 #### Example usage in components:
 
 ```javascript
+'use client';
 
-"use client"
-
-import { useLanguage } from "@/lib/i18n/client"
+import { useLanguage } from '@/lib/i18n/client';
 
 export function MyComponent() {
-  const { t } = useLanguage()
-  
+  const { t } = useLanguage();
+
   return (
     <div>
       <h1>{t('section.title')}</h1>
       <p>{t('section.description')}</p>
     </div>
-  )
+  );
 }
-
 ```
 
 ## Customization
@@ -154,7 +146,6 @@ The project uses Tailwind CSS for styling. The main theme colors and other desig
 - [shadcn/ui](https://ui.shadcn.com/) - UI components
 - [Lucide Icons](https://lucide.dev/) - Beautiful icons
 - [Vercel](https://vercel.com/) - Deployment platform
-
 
 ## License
 

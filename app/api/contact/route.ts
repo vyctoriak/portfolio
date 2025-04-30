@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: 'gmail',
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_APP_PASSWORD,
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: "vyctoriak@gmail.com",
+      to: 'vyctoriak@gmail.com',
       subject: `Contato através do portfolio: ${subject}`,
       text: `
         Nome: ${name}
@@ -37,10 +37,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error sending email:", error);
-    return NextResponse.json(
-      { error: "Erro ao enviar email" },
-      { status: 500 }
-    );
+    console.error('Error sending email:', error);
+    return NextResponse.json({ error: 'Erro ao enviar email' }, { status: 500 });
   }
 }

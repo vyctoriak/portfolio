@@ -1,22 +1,22 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useMobile } from "@/hooks/use-mobile"
-import { useLanguage } from "@/lib/i18n/client"
-import { LanguageSwitcher } from "@/components/language-switcher"
-import { ThemeToggle } from "./theme-toggle"
+import { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useMobile } from '@/hooks/use-mobile';
+import { useLanguage } from '@/lib/i18n/client';
+import { LanguageSwitcher } from '@/components/language-switcher';
+import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
-  const isMobile = useMobile()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { t, locale } = useLanguage()
+  const isMobile = useMobile();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, locale } = useLanguage();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -42,35 +42,35 @@ export function Header() {
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t("header.about")}
+                  {t('header.about')}
                 </Link>
                 <Link
                   href="#skills"
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t("header.skills")}
+                  {t('header.skills')}
                 </Link>
                 <Link
                   href="#projects"
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t("header.projects")}
+                  {t('header.projects')}
                 </Link>
                 <Link
                   href="#testimonials"
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t("header.testimonials")}
+                  {t('header.testimonials')}
                 </Link>
                 <Link
                   href="#contact"
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t("header.contact")}
+                  {t('header.contact')}
                 </Link>
               </div>
             )}
@@ -78,20 +78,35 @@ export function Header() {
         ) : (
           <div className="flex items-center">
             <nav className="flex items-center gap-6 mr-4">
-              <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t("header.about")}
+              <Link
+                href="#about"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('header.about')}
               </Link>
-              <Link href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t("header.skills")}
+              <Link
+                href="#skills"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('header.skills')}
               </Link>
-              <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t("header.projects")}
+              <Link
+                href="#projects"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('header.projects')}
               </Link>
-              <Link href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t("header.testimonials")}
+              <Link
+                href="#testimonials"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('header.testimonials')}
               </Link>
-              <Link href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                {t("header.contact")}
+              <Link
+                href="#contact"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('header.contact')}
               </Link>
             </nav>
             <div className="flex items-center gap-2">
@@ -102,6 +117,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }
-

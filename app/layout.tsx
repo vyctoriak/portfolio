@@ -1,27 +1,27 @@
-import type React from "react"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ThemeProviderWrapper } from "@/components/providers/theme-provider-wrapper"
+import type React from 'react';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { ThemeProviderWrapper } from '@/components/providers/theme-provider-wrapper';
 
 // Initialize the font outside of the component
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-})
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="font-sans bg-background">
-        <ThemeProviderWrapper 
-          attribute="class" 
-          defaultTheme="light" 
-          enableSystem={false} 
+        <ThemeProviderWrapper
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}

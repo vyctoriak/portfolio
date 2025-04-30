@@ -1,31 +1,31 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "../globals.css"
-import { getTranslations } from "@/lib/i18n/server"
-import { LanguageProvider } from "@/lib/i18n/client"
-import type { Locale } from "@/lib/i18n/types"
-import { Toaster } from "@/components/ui/toaster"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import type React from 'react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '../globals.css';
+import { getTranslations } from '@/lib/i18n/server';
+import { LanguageProvider } from '@/lib/i18n/client';
+import type { Locale } from '@/lib/i18n/types';
+import { Toaster } from '@/components/ui/toaster';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-})
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: "Vyctoria Karina | Software Developer",
-  description: "Portfolio of Vyctoria Karina, Software Developer",
-}
+  title: 'Vyctoria Karina | Software Developer',
+  description: 'Portfolio of Vyctoria Karina, Software Developer',
+};
 
 export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: React.ReactNode
-  params: { locale: Locale }
+  children: React.ReactNode;
+  params: { locale: Locale };
 }) {
   const resolvedParams = await Promise.resolve(params);
   const locale = resolvedParams.locale;
@@ -40,4 +40,3 @@ export default async function LocaleLayout({
     </LanguageProvider>
   );
 }
-
