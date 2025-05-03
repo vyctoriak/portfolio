@@ -18,7 +18,7 @@ export function Skills() {
       icon: <Server className="h-10 w-10 text-primary" />,
       title: t('skills.backend.title'),
       description: t('skills.backend.description'),
-      technologies: ['Node.js', 'Express', 'NestJS', 'REST APIs', 'GraphQL'],
+      technologies: ['Node.js', 'Express', 'NestJS', 'RESTful APIs', 'Python'],
     },
     {
       icon: <Database className="h-10 w-10 text-primary" />,
