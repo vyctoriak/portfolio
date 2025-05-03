@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description: 'Portfolio of Vyctoria Karina, Software Developer',
 };
 
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
@@ -32,11 +32,15 @@ export default async function LocaleLayout({
   const translations = await getTranslations(locale);
 
   return (
-    <LanguageProvider locale={locale} translations={translations}>
-      {children}
-      <Toaster />
-      <SpeedInsights />
-      <Analytics />
-    </LanguageProvider>
+    <html lang={locale} className={inter.variable} suppressHydrationWarning>
+      <body className="font-sans bg-background" suppressHydrationWarning>
+        <LanguageProvider locale={locale} translations={translations}>
+          {children}
+          <Toaster />
+          <SpeedInsights />
+          <Analytics />
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }
