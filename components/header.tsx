@@ -59,11 +59,11 @@ export function Header() {
                   {t('header.projects')}
                 </Link>
                 <Link
-                  href="#testimonials"
+                  href="#tech-stack"
                   onClick={toggleMenu}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  {t('header.testimonials')}
+                  {t('header.techStack')}
                 </Link>
                 <Link
                   href="#contact"
@@ -97,10 +97,10 @@ export function Header() {
                 {t('header.projects')}
               </Link>
               <Link
-                href="#testimonials"
+                href="#tech-stack"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                {t('header.testimonials')}
+                {t('header.techStack')}
               </Link>
               <Link
                 href="#contact"

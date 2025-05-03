@@ -6,7 +6,7 @@ export const translations = {
       about: 'About',
       skills: 'Skills',
       projects: 'Projects',
-      testimonials: 'Testimonials',
+      techStack: 'Tech Stack',
       contact: 'Contact',
     },
     hero: {
@@ -97,6 +97,35 @@ export const translations = {
       code: 'Code',
       liveDemo: 'Live Demo',
     },
+    techStack: {
+      title: 'Tech Stack',
+      subtitle: 'Technologies and tools I use to build modern, scalable applications.',
+      frontend: {
+        title: 'Frontend Development',
+        description:
+          'Building responsive and performant user interfaces with modern JavaScript frameworks.',
+      },
+      backend: {
+        title: 'Backend Development',
+        description: 'Creating robust server-side applications and APIs with Node.js ecosystem.',
+      },
+      database: {
+        title: 'Database & Storage',
+        description: 'Working with various databases and data storage solutions.',
+      },
+      cloud: {
+        title: 'Cloud & DevOps',
+        description: 'Deploying and managing applications in cloud environments.',
+      },
+      testing: {
+        title: 'Testing & Quality',
+        description: 'Ensuring code quality and reliability through comprehensive testing.',
+      },
+      tools: {
+        title: 'Development Tools',
+        description: 'Essential tools and technologies for modern development workflow.',
+      },
+    },
     testimonials: {
       title: 'Testimonials',
       subtitle: "Here's what clients and colleagues have to say about working with me.",
@@ -162,7 +191,7 @@ export const translations = {
       about: 'Sobre',
       skills: 'Habilidades',
       projects: 'Projetos',
-      testimonials: 'Depoimentos',
+      techStack: 'Tech Stack',
       contact: 'Contato',
     },
     hero: {
@@ -221,7 +250,7 @@ export const translations = {
     projects: {
       title: 'Meus Projetos',
       subtitle:
-        'Aqui estão alguns dos projetos em que trabalhei. Cada um representa diferentes desafios e soluções na minha jornada de desenvolvimento.',
+        'Aqui estão alguns dos projetos em que trabalhei. Cada um representa diferentes desafios e soluções em minha jornada de desenvolvimento.',
       ecommerce: {
         title: 'Plataforma de E-commerce',
         description:
@@ -254,6 +283,39 @@ export const translations = {
       },
       code: 'Código',
       liveDemo: 'Demo ao Vivo',
+    },
+    techStack: {
+      title: 'Stack Tecnológica',
+      subtitle:
+        'Tecnologias e ferramentas que uso para construir aplicações modernas e escaláveis.',
+      frontend: {
+        title: 'Desenvolvimento Frontend',
+        description:
+          'Construindo interfaces responsivas e performáticas com frameworks JavaScript modernos.',
+      },
+      backend: {
+        title: 'Desenvolvimento Backend',
+        description:
+          'Criando aplicações robustas do lado do servidor e APIs com o ecossistema Node.js.',
+      },
+      database: {
+        title: 'Banco de Dados & Armazenamento',
+        description: 'Trabalhando com diversos bancos de dados e soluções de armazenamento.',
+      },
+      cloud: {
+        title: 'Cloud & DevOps',
+        description: 'Implantando e gerenciando aplicações em ambientes de nuvem.',
+      },
+      testing: {
+        title: 'Testes & Qualidade',
+        description:
+          'Garantindo qualidade e confiabilidade do código através de testes abrangentes.',
+      },
+      tools: {
+        title: 'Ferramentas de Desenvolvimento',
+        description:
+          'Ferramentas e tecnologias essenciais para o fluxo de trabalho moderno de desenvolvimento.',
+      },
     },
     testimonials: {
       title: 'Depoimentos',

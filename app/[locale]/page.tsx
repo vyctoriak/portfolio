@@ -3,7 +3,7 @@ import { Hero } from '@/components/hero';
 import { About } from '@/components/about';
 import { Skills } from '@/components/skills';
 import { Projects } from '@/components/projects';
-import { Testimonials } from '@/components/testimonials';
+import { TechStack } from '@/components/tech-stack';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 import type { Locale } from '@/lib/i18n/types';
@@ -17,7 +17,7 @@ export default function Home({ params }: { params: { locale: Locale } }) {
         <About />
         <Skills />
         <Projects />
-        <Testimonials />
+        <TechStack />
         <Contact />
       </main>
       <Footer />
