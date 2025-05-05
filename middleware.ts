@@ -41,6 +41,11 @@ export function middleware(request: NextRequest) {
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
+  // If it's the root path, redirect to default locale
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
+  }
+
   // Redirect if there is no locale
   if (!pathnameHasLocale) {
     // Get the preferred locale
