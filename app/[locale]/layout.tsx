@@ -8,6 +8,7 @@ import type { Locale } from '@/lib/i18n/types';
 import { Toaster } from '@/components/ui/toaster';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProviderWrapper } from '@/components/providers/theme-provider-wrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,10 +36,17 @@ export default async function RootLayout({
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <body className="font-sans bg-background" suppressHydrationWarning>
         <LanguageProvider locale={locale} translations={translations}>
-          {children}
-          <Toaster />
-          <SpeedInsights />
-          <Analytics />
+          <ThemeProviderWrapper
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            {children}
+            <Toaster />
+            <SpeedInsights />
+            <Analytics />
+          </ThemeProviderWrapper>
         </LanguageProvider>
       </body>
     </html>
