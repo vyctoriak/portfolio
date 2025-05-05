@@ -139,6 +139,32 @@ The project uses Tailwind CSS for styling. The main theme colors and other desig
 - `tailwind.config.ts` - For theme configuration
 - `app/globals.css` - For global styles and CSS variables
 
+## Git Hooks with Husky
+
+This project uses Husky and lint-staged to ensure code quality before commits and pushes:
+
+### Pre-commit Hook
+
+- Runs lint-staged on staged files
+- Executes lint and build checks only on modified files
+- Prevents commits with linting errors or build failures
+
+### Pre-push Hook
+
+- Runs full project lint check
+- Executes full project build
+- Prevents pushing code that doesn't pass all checks
+
+### Configuration
+
+The hooks are configured in:
+
+- `.husky/pre-commit` - Runs lint-staged
+- `.husky/pre-push` - Runs lint and build
+- `package.json` - Contains lint-staged configuration
+
+This ensures that only code that passes all quality checks reaches the repository.
+
 ## Acknowledgments
 
 - [Next.js](https://nextjs.org/) - The React framework
