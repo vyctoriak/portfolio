@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running lint..."
+npm run lint
+
+# Capture the exit status of the lint
+LINT_STATUS=$?
+
+if [ $LINT_STATUS -ne 0 ]; then
+    echo "❌ Lint failed! Push aborted."
+    exit 1
+fi
+
+echo "✅ Lint successful!"
+
+echo "🔨 Running build..."
+npm run build
+
+# Capture the exit status of the build
+BUILD_STATUS=$?
+
+if [ $BUILD_STATUS -ne 0 ]; then
+    echo "❌ Build failed! Push aborted."
+    exit 1
+fi
+
+echo "✅ Build successful! Proceeding with push..." 
