@@ -101,6 +101,10 @@ export const translations = {
       },
       code: 'Code',
       liveDemo: 'Live Demo',
+      comingSoon: {
+        title: 'Coming soon...',
+        description: 'More projects will be added soon.',
+      },
     },
     techStack: {
       title: 'Tech Stack',
@@ -293,6 +297,10 @@ export const translations = {
       },
       code: 'Código',
       liveDemo: 'Demo ao Vivo',
+      comingSoon: {
+        title: 'Em breve...',
+        description: 'Mais projetos serão adicionados em breve.',
+      },
     },
     techStack: {
       title: 'Stack Tecnológica',

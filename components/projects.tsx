@@ -20,44 +20,44 @@ export function Projects() {
       githubUrl: 'https://github.com/vyctoriak/orgaio',
     },
     {
-      title: t('projects.taskManagement.title'),
-      description: t('projects.taskManagement.description'),
+      title: t('projects.comingSoon.title'),
+      description: t('projects.comingSoon.description'),
       image: '/placeholder.svg',
-      tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: '#',
+      tags: [],
+      liveUrl: '',
+      githubUrl: '',
     },
     {
-      title: t('projects.financeDashboard.title'),
-      description: t('projects.financeDashboard.description'),
+      title: t('projects.comingSoon.title'),
+      description: t('projects.comingSoon.description'),
       image: '/placeholder.svg',
-      tags: ['React', 'D3.js', 'Express', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#',
+      tags: [],
+      liveUrl: '',
+      githubUrl: '',
     },
     {
-      title: t('projects.fitnessApp.title'),
-      description: t('projects.fitnessApp.description'),
+      title: t('projects.comingSoon.title'),
+      description: t('projects.comingSoon.description'),
       image: '/placeholder.svg',
-      tags: ['React Native', 'Firebase', 'Redux', 'Health APIs'],
-      liveUrl: '#',
-      githubUrl: '#',
+      tags: [],
+      liveUrl: '',
+      githubUrl: '',
     },
     {
-      title: t('projects.cms.title'),
-      description: t('projects.cms.description'),
+      title: t('projects.comingSoon.title'),
+      description: t('projects.comingSoon.description'),
       image: '/placeholder.svg',
-      tags: ['Next.js', 'GraphQL', 'Prisma', 'AWS S3'],
-      liveUrl: '#',
-      githubUrl: '#',
+      tags: [],
+      liveUrl: '',
+      githubUrl: '',
     },
     {
-      title: t('projects.realEstate.title'),
-      description: t('projects.realEstate.description'),
+      title: t('projects.comingSoon.title'),
+      description: t('projects.comingSoon.description'),
       image: '/placeholder.svg',
-      tags: ['React', 'Node.js', 'Google Maps API', 'PostgreSQL'],
-      liveUrl: '#',
-      githubUrl: '#',
+      tags: [],
+      liveUrl: '',
+      githubUrl: '',
     },
   ];
 
@@ -88,28 +88,32 @@ export function Projects() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <Button variant="outline" size="sm" asChild>
-                    <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" /> {t('projects.code')}
-                    </Link>
-                  </Button>
-                  <Button size="sm" asChild>
-                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" /> {t('projects.liveDemo')}
-                    </Link>
-                  </Button>
-                </div>
+                {project.tags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {project.githubUrl && project.liveUrl && (
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> {t('projects.code')}
+                      </Link>
+                    </Button>
+                    <Button size="sm" asChild>
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> {t('projects.liveDemo')}
+                      </Link>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
