@@ -145,23 +145,22 @@ This project uses Husky and lint-staged to ensure code quality before commits an
 
 ### Pre-commit Hook
 
-- Runs lint-staged on staged files
-- Executes lint and build checks only on modified files
-- Prevents commits with linting errors or build failures
+- Runs lint-staged on staged files (only lints changed files)
+- Prevents commits with linting errors
 
 ### Pre-push Hook
 
-- Runs full project lint check
-- Executes full project build
-- Prevents pushing code that doesn't pass all checks
+- Runs lint on the entire project
+- Runs a full project build
+- Prevents pushing code that fails lint or build
 
 ### Configuration
 
 The hooks are configured in:
 
-- `.husky/pre-commit` - Runs lint-staged
-- `.husky/pre-push` - Runs lint and build
-- `package.json` - Contains lint-staged configuration
+- `.husky/pre-commit` – Runs lint-staged (only lints changed files)
+- `.husky/pre-push` – Runs lint and build on the whole project
+- `package.json` – Contains the lint-staged configuration
 
 This ensures that only code that passes all quality checks reaches the repository.
 
