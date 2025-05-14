@@ -25,7 +25,10 @@ export const translations = {
       yearsExperience: 'Years Experience',
       projectsCompleted: 'Projects Completed',
       happyClients: 'Happy Clients',
-      industryAwards: 'Industry Awards',
+      toolsMastered: 'Tools Mastered',
+      communitiesVolunteered: 'Communities Volunteered',
+      communitiesVolunteeredTooltip:
+        'Pyladies Campinas - Brazil & Django Girls Campinas - Brazil (mentor and organizer)',
     },
     skills: {
       title: 'My Skills',
@@ -135,28 +138,6 @@ export const translations = {
         description: 'Essential tools and technologies for modern development workflow.',
       },
     },
-    testimonials: {
-      title: 'Testimonials',
-      subtitle: "Here's what clients and colleagues have to say about working with me.",
-      alex: {
-        name: 'Alex Moe',
-        position: 'CTO, ParvaStart Inc.',
-        content:
-          'Vyctoria is an exceptional developer who consistently delivers high-quality work. Her attention to detail and problem-solving skills are outstanding.',
-      },
-      sarah: {
-        name: 'Carol Williams',
-        position: 'Product Manager, VishnuCorp',
-        content:
-          'Working with Vyctoria was a pleasure. She understood our requirements perfectly and delivered a solution that exceeded our expectations.',
-      },
-      michael: {
-        name: 'Max Chen',
-        position: 'Founder, Durga Solutions',
-        content:
-          "Vyctoria's technical expertise and communication skills made our project a success. She's proactive, reliable, and delivers on time.",
-      },
-    },
     contact: {
       title: 'Get In Touch',
       subtitle:
@@ -219,7 +200,10 @@ export const translations = {
       yearsExperience: 'Anos de Experiência',
       projectsCompleted: 'Projetos Concluídos',
       happyClients: 'Clientes Satisfeitos',
-      industryAwards: 'Prêmios do Setor',
+      toolsMastered: 'Ferramentas Dominadas',
+      communitiesVolunteered: 'Comunidades Voluntariadas',
+      communitiesVolunteeredTooltip:
+        'Pyladies Campinas & Django Girls Campinas (mentora e organizadora)',
     },
     skills: {
       title: 'Minhas Habilidades',
@@ -333,28 +317,6 @@ export const translations = {
         title: 'Ferramentas de Desenvolvimento',
         description:
           'Ferramentas e tecnologias essenciais para o fluxo de trabalho moderno de desenvolvimento.',
-      },
-    },
-    testimonials: {
-      title: 'Depoimentos',
-      subtitle: 'Veja o que clientes e colegas têm a dizer sobre trabalhar comigo.',
-      alex: {
-        name: 'Alex Moe',
-        position: 'CTO, ParvaStart Inc.',
-        content:
-          'Vyctoria é uma desenvolvedora excepcional que constantemente entrega trabalho de alta qualidade. Sua atenção aos detalhes e habilidades de resolução de problemas são extraordinárias.',
-      },
-      sarah: {
-        name: 'Carol Williams',
-        position: 'Gerente de Produto, VishnuCorp',
-        content:
-          'Trabalhar com Vyctoria foi um prazer. Ela entendeu perfeitamente nossos requisitos e entregou uma solução que superou nossas expectativas.',
-      },
-      michael: {
-        name: 'Max Chen',
-        position: 'Fundador, Durga Solutions',
-        content:
-          'A expertise técnica e habilidades de comunicação da Vyctoria tornaram nosso projeto um sucesso. Ela é proativa, confiável e entrega no prazo.',
       },
     },
     contact: {

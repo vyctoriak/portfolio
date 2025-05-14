@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Download } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/client';
 import { saveAs } from 'file-saver';
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@/components/ui/tooltip';
 
 export function About() {
   const { t, locale } = useLanguage();
@@ -41,26 +42,35 @@ export function About() {
           <div className="grid grid-cols-2 gap-4">
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-2">5+</h3>
+                <h3 className="text-4xl font-bold text-primary mb-2">6+</h3>
                 <p className="text-muted-foreground">{t('about.yearsExperience')}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-2">20+</h3>
+                <h3 className="text-4xl font-bold text-primary mb-2">10+</h3>
                 <p className="text-muted-foreground">{t('about.projectsCompleted')}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
                 <h3 className="text-4xl font-bold text-primary mb-2">10+</h3>
-                <p className="text-muted-foreground">{t('about.happyClients')}</p>
+                <p className="text-muted-foreground">{t('about.toolsMastered')}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="text-4xl font-bold text-primary mb-2">3</h3>
-                <p className="text-muted-foreground">{t('about.industryAwards')}</p>
+                <h3 className="text-4xl font-bold text-primary mb-2">2</h3>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <p className="text-muted-foreground cursor-pointer">
+                        {t('about.communitiesVolunteered')}
+                      </p>
+                    </TooltipTrigger>
+                    <TooltipContent>{t('about.communitiesVolunteeredTooltip')}</TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </CardContent>
             </Card>
           </div>
