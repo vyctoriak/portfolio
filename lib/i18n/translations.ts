@@ -94,6 +94,11 @@ export const translations = {
         description:
           'A platform for property listings with advanced search, virtual tours, and appointment scheduling.',
       },
+      orgaio: {
+        title: 'Orgaio',
+        description:
+          'Organize, manage, and optimize your tasks and projects with Orgaio. An intuitive platform for personal and team productivity.',
+      },
       code: 'Code',
       liveDemo: 'Live Demo',
     },
@@ -280,6 +285,11 @@ export const translations = {
         title: 'Plataforma Imobiliária',
         description:
           'Uma plataforma para listagens de imóveis com busca avançada, tours virtuais e agendamento de visitas.',
+      },
+      orgaio: {
+        title: 'Orgaio',
+        description:
+          'Organize, gerencie e otimize suas tarefas e projetos com o Orgaio. Uma plataforma intuitiva para produtividade pessoal e em equipe.',
       },
       code: 'Código',
       liveDemo: 'Demo ao Vivo',

@@ -12,12 +12,12 @@ export function Projects() {
 
   const projects = [
     {
-      title: t('projects.ecommerce.title'),
-      description: t('projects.ecommerce.description'),
-      image: '/placeholder.svg',
-      tags: ['Next.js', 'TypeScript', 'Stripe', 'Tailwind CSS'],
-      liveUrl: '#',
-      githubUrl: '#',
+      title: t('projects.orgaio.title'),
+      description: t('projects.orgaio.description'),
+      image: '/orgaio-logo.svg',
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Zustand', 'DnD Kit', 'Date-fns'],
+      liveUrl: 'https://vyctoriak.github.io/orgaio/',
+      githubUrl: 'https://github.com/vyctoriak/orgaio',
     },
     {
       title: t('projects.taskManagement.title'),
