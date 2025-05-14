@@ -185,7 +185,7 @@ export const translations = {
       contact: 'Contato',
     },
     hero: {
-      greeting: 'Olá, eu sou',
+      greeting: 'Olá, eu sou a',
       role: 'Desenvolvedora de Software especializada em criar experiências digitais excepcionais',
       viewWork: 'Veja meu trabalho',
       contactMe: 'Entre em contato',
