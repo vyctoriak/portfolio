@@ -90,8 +90,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npm run lint:all",
-      "npm run build"
+      "npm run lint:all"
     ]
   }
 }
