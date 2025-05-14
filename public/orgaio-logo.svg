@@ -1,0 +1,11 @@
+<svg width="200" height="70" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+
+    <linearGradient id="text-gradient" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B0575C"/>
+      <stop offset="1" stop-color="#FFA36C"/>
+    </linearGradient>
+  </defs>
+
+  <text x="40" y="50" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="bold" fill="url(#text-gradient)">Orgaio</text>
+</svg>
