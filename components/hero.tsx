@@ -5,6 +5,7 @@ import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/client';
 import Image from 'next/image';
+import { TypeAnimation } from 'react-type-animation';
 
 export function Hero() {
   const { t, locale } = useLanguage();
@@ -14,7 +15,14 @@ export function Hero() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            {t('hero.greeting')} <span className="text-primary">Vyctoria Karina</span>
+            <TypeAnimation
+              sequence={[`${t('hero.greeting')} \n Vyctoria Karina`, 1000]}
+              wrapper="span"
+              speed={40}
+              repeat={0}
+              cursor={false}
+              className="inline"
+            />
           </h1>
           <p className="text-xl text-muted-foreground">{t('hero.role')}</p>
           <div className="flex gap-4">
