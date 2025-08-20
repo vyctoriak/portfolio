@@ -8,7 +8,6 @@ export async function getTranslations(locale: Locale) {
   }
 
   // Fallback to English if locale not found
-  console.warn(`Translations for locale "${locale}" not found, falling back to English`);
   return translations.en;
 }
 

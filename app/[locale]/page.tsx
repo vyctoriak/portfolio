@@ -8,7 +8,8 @@ import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
 import type { Locale } from '@/lib/i18n/types';
 
-export default function Home({ params }: { params: { locale: Locale } }) {
+export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
+  await params;
   return (
     <div className="min-h-screen bg-background">
       <Header />

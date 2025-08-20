@@ -52,7 +52,6 @@ export function LanguageProvider({
       if (result && typeof result === 'object' && k in result) {
         result = result[k];
       } else {
-        console.warn(`Translation key not found: ${key}`);
         return key;
       }
     }

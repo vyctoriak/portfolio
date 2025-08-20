@@ -9,6 +9,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProviderWrapper } from '@/components/providers/theme-provider-wrapper';
+import { ErrorBoundary } from '@/components/error-boundary';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,9 +27,9 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }) {
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const locale = resolvedParams.locale;
   const translations = await getTranslations(locale);
 
@@ -42,7 +43,7 @@ export default async function RootLayout({
             enableSystem={false}
             disableTransitionOnChange
           >
-            {children}
+            <ErrorBoundary>{children}</ErrorBoundary>
             <Toaster />
             <SpeedInsights />
             <Analytics />
