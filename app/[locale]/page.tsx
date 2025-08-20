@@ -6,9 +6,8 @@ import { Projects } from '@/components/projects';
 import { TechStack } from '@/components/tech-stack';
 import { Contact } from '@/components/contact';
 import { Footer } from '@/components/footer';
-import type { Locale } from '@/lib/i18n/types';
 
-export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   await params;
   return (
     <div className="min-h-screen bg-background">
