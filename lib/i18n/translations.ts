@@ -11,7 +11,7 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      role: 'Software Developer specialized in building exceptional digital experiences',
+      role: 'Software Engineer',
       viewWork: 'View my work',
       contactMe: 'Contact me',
     },
@@ -186,7 +186,7 @@ export const translations = {
     },
     hero: {
       greeting: 'Olá, eu sou a',
-      role: 'Desenvolvedora de Software especializada em criar experiências digitais excepcionais',
+      role: 'Desenvolvedora de Software',
       viewWork: 'Veja meu trabalho',
       contactMe: 'Entre em contato',
     },
